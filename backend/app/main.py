@@ -2,8 +2,19 @@ from fastapi import FastAPI
 from sqlalchemy import text
 
 from app.database.database import engine
+from app.database.base import Base
+from app.routers.user import router as user_router
 
-app = FastAPI(title="TinkerTrack", version="1.0")
+# Create database tables
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI(
+    title="TinkerTrack",
+    description="Shared Resource Management System",
+    version="1.0.0",
+)
+
+app.include_router(user_router)
 
 
 @app.get("/")
@@ -17,16 +28,12 @@ def health():
 
 
 @app.get("/db-check")
-def db_check():
-
+def database_check():
     try:
-
         with engine.connect() as connection:
-
             connection.execute(text("SELECT 1"))
 
         return {"database": "Connected Successfully"}
 
     except Exception as e:
-
         return {"database": "Connection Failed", "error": str(e)}
