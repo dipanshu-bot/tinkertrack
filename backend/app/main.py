@@ -1,10 +1,9 @@
 from fastapi import FastAPI
+from sqlalchemy import text
 
-app = FastAPI(
-    title="TinkerTrack",
-    description="Shared Resource Management System",
-    version="1.0.0",
-)
+from app.database.database import engine
+
+app = FastAPI(title="TinkerTrack", version="1.0")
 
 
 @app.get("/")
@@ -15,3 +14,19 @@ def home():
 @app.get("/health")
 def health():
     return {"status": "healthy"}
+
+
+@app.get("/db-check")
+def db_check():
+
+    try:
+
+        with engine.connect() as connection:
+
+            connection.execute(text("SELECT 1"))
+
+        return {"database": "Connected Successfully"}
+
+    except Exception as e:
+
+        return {"database": "Connection Failed", "error": str(e)}
