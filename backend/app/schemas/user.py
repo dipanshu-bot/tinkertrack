@@ -1,4 +1,5 @@
 from pydantic import BaseModel, EmailStr
+from fastapi import Depends
 
 
 class UserCreate(BaseModel):
