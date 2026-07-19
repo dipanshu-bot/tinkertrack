@@ -1,0 +1,159 @@
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #0f172a;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 240px;
+    padding: 30px;
+}
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #111827;
+    color: white;
+    padding: 25px 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #d1d5db;
+    text-decoration: none;
+
+    padding: 14px 18px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    transition: .25s;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.sidebar a.active {
+    background: #2563eb;
+    color: white;
+}
+
+.navbar{
+
+    height:70px;
+
+    background:white;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+    margin-bottom:30px;
+
+}
+
+.navbar h2{
+
+    color:#1e293b;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:bold;
+
+    color:#4f46e5;
+
+}
+
+.profile {
+    color: #6b21a8;
+    font-weight: bold;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    text-align: center;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #60a5fa;
+}
+
+.card h1 {
+    font-size: 42px;
+}
+
+.active {
+    background: #3b82f6;
+    color: white;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1f2937;
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #374151;
+}
+
+tr:nth-child(even) {
+    background: #2d3748;
+}
+
+h1 {
+    color: white;
+}
