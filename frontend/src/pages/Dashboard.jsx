@@ -40,6 +40,7 @@ export default function Dashboard() {
                     color: "white",
                     marginBottom: "30px",
                     textAlign: "center",
+                    width: "calc(100vw - 220px)",
                 }}
             >
                 TinkerTrack Dashboard

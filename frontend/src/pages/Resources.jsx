@@ -60,12 +60,14 @@ export default function Resources() {
         {
             field: "name",
             headerName: "Resource",
+            minWidth: 220,
             flex: 2,
         },
 
         {
             field: "category",
             headerName: "Category",
+            minWidth: 170,
             flex: 1.5,
         },
 
@@ -245,7 +247,13 @@ export default function Resources() {
                 </Button>
             </Box>
 
-            <Paper sx={{ height: 500 }}>
+            <Paper
+                sx={{
+                    height: 550,
+                    width: "100%",
+                    minWidth: 1100,
+                }}
+            >
 
                 <DataGrid
                     rows={filteredResources}
@@ -260,9 +268,13 @@ export default function Resources() {
                     }}
                     sx={{
                         border: 0,
-
-                        "& .MuiDataGrid-row:hover": {
-                            backgroundColor: "#f5f5f5",
+                        width: "100%",
+                        "& .MuiDataGrid-columnHeaders": {
+                            fontWeight: "bold",
+                            fontSize: 15,
+                        },
+                        "& .MuiDataGrid-cell": {
+                            fontSize: 14,
                         },
                     }}
                 />
