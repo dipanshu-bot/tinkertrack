@@ -249,12 +249,30 @@ http://localhost:5173
 
 Add screenshots of:
 
-* Login Page
-* Dashboard
-* Resources
-* Borrow Module
-* Reservation Module
-* Swagger Documentation
+# Screenshots
+
+### Login Page
+![Login Screenshot](Screenshots_of_Project/Login.png)
+
+### Dashboard
+![Dashboard Screenshot](Screenshots_of_Project/Dashboard.png)
+
+### Resources
+![Resources Screenshot](Screenshots_of_Project/Resources.png)
+
+### Borrow Module
+![Borrow Screenshot](Screenshots_of_Project/BorrowHistory.png)
+
+### Reservation Module
+![Reservation Screenshot](Screenshots_of_Project/Reservation.png)
+
+### Swagger Documentation
+![Swagger Screenshot](Screenshots_of_Project/Swagger1.png)
+### Swagger Documentation
+![Swagger Screenshot](Screenshots_of_Project/Swagger2.png)
+### Swagger Documentation
+![Swagger Screenshot](Screenshots_of_Project/Swagger3.png)
+
 
 ---
 
